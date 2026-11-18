@@ -58,6 +58,7 @@ rejected_count = result.filter(F.col("validation_result") == "REJECT").count()
 
 print("Valid records:", valid_count)
 print("Rejected records:", rejected_count)
+print("All assertions passed")
 
 assert valid_count == 1, "Expected exactly one valid record"
 assert rejected_count == 3, "Expected exactly three rejected records"
